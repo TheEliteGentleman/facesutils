@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package za.co.sindi.faces.utils;
+
+import java.text.MessageFormat;
+
+import javax.faces.application.FacesMessage;
+import javax.xml.soap.MessageFactory;
+
+/**
+ * @author Bienfait Sindi
+ * @since 09 April 2014
+ *
+ */
+public class MessageUtils {
+
+	/**
+	 * 
+	 */
+	private MessageUtils() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static String getExceptionMessageString(String messageId, Object... params) {
+
+		String result = null;
+		FacesMessage message = MessageFactory.getMessage(messageId, params);
+		if (null != message) {
+			result = message.getSummary();
+		}
+
+		if (null == result) {
+			result = "null MessageFactory";
+		} else {
+			if (params != null) {
+				result = MessageFormat.format(result, params);
+			}
+		}
+		
+		return result;
+	}
+
+}

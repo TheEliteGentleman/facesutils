@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib version="2.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0.xsd">
+	<namespace>http://sindi.co.za/faces/utils</namespace>
+	<!-- HTML <source> element using sources-->
+	<tag>
+		<description>
+			<![CDATA[The input Captcha Component]]>
+		</description>
+		<tag-name>inputCaptcha</tag-name>
+		<component>
+			<component-type>za.co.sindi.faces.InputReCaptcha</component-type>
+		</component>
+		<!-- Core attributes -->
+		<attribute>
+			<description>reCaptcha API's public key.</description>
+			<name>publicKey</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>reCaptcha API's private key.</description>
+			<name>privateKey</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>reCaptcha ReCaptchaOptions theme. Defines which theme to use for reCAPTCHA. Possible values are: red, white, blackglass, clean or custom. Default is red.</description>
+			<name>theme</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>reCaptcha ReCaptchaOptions language code. Which language is used in the interface for the pre-defined themes. Supported language code (en, nl, fr, de, pt, ru, es, tr). Default is en.</description>
+			<name>lang</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>reCaptcha ReCaptchaOptions tabindex. Sets a tabindex for the reCAPTCHA textbox. Default is 0.</description>
+			<name>tabindex</name>
+			<required>false</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<description>Sets the API call to use HTTPS or HTTP. Default is false (meaning it invokes the reCAPTCHA API on a HTTP protocol).</description>
+			<name>secure</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			<![CDATA[The UI Component that renders the IE conditional comment.]]>
+		</description>
+		<tag-name>conditionalComment</tag-name>
+		<component>
+			<component-type>za.co.sindi.faces.IEConditionalComment</component-type>
+		</component>
+		<attribute>
+			<description>A combination of operators, features, and/or values used to form a conditional statement.</description>
+			<name>expression</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>If set to true (default), a conditional comment block wil be rendered that is ignored by downlevel browsers, otherwise a conditional comment block will be rendered that is parsed by downlevel browsers. Internet Explorer 5 and later versions render the HTML content if the expression evaluates to true.</description>
+			<name>downlevelHidden</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+	</tag>
+</facelet-taglib>

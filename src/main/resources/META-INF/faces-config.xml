@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd ">
+	<name>Faces_Utils</name>
+	<!-- 
+	<application>
+	    <resource-bundle>
+	        <base-name>za.co.sindi.properties.reCAPTCHA</base-name>
+	        <var>reCAPTCHA</var>
+	    </resource-bundle>
+	</application>
+	-->
+</faces-config>
